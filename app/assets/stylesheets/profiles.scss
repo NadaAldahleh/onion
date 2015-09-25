@@ -1,0 +1,28 @@
+// Place all the styles related to the Profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.alert{
+  color:red;
+}
+
+.error-field{
+  border:1px solid red;
+}
+
+.avatar{
+  font-size:2em;
+  color:#777777;
+  font-weight:bold;
+  margin:25px;
+}
+
+form{
+  &.ondragover{
+    border:5px solid #3388ee;;
+  }
+  margin:10px;
+  .form-field{
+    margin:10px;
+  }
+}

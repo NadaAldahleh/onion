@@ -1,0 +1,26 @@
+<%= form_for :profile, :method => :put, :url => profile_path, :html => {:class => 'profile_image_droppable'} do |f| %>
+
+  <div class="avatar">
+    Drag and drop profile photo here
+  </div>
+
+
+  <% if @profile.errors.any? then  %>
+    <p class="alert alert-error">Ooops! There is an error!</p>
+  <% end #errors.any? %>
+
+  <div class="form-field">
+    Name: <%= f.text_field :name %><br />
+  </div>
+
+  <div class="form-field">
+    Company : <%= f.text_field :company %><br />
+  </div>
+
+  <div class= <%= @profile.errors[:location].any? ? "error-field form-field" : "form-field" %> >
+    Location : <%= f.text_field :location %><br />
+  </div>
+  <div class="form-field">
+    <%= f.submit %>
+  </div>
+<% end %>
