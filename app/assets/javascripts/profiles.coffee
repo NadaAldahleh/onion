@@ -9,6 +9,16 @@ $(document).ready ->
 
   counter = 0
 
+  $('body').on 'dragover', (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    return
+
+  $('body').on 'drop', (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    return
+
   $('.profile_image_droppable').on 'dragover', (e) ->
     e.preventDefault()
     e.stopPropagation()
